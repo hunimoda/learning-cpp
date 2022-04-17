@@ -3,55 +3,40 @@
 using namespace std;
 
 int main() {
-    bool equal_result {false};
-    bool not_equal_result {false};
+    int num {};
+    const int kLower {10};
+    const int kUpper {20};
 
-    //int num1 {}, num2 {};
+    cout << boolalpha;
+    //cout << "Enter an integer between " 
+    //    << kLower << " and " << kUpper << ": ";
+    //cin >> num;
 
-    //cout << boolalpha;
+    //bool is_within_bounds {false};
 
-    //cout << "Enter two integers: ";
-    //cin >> num1 >> num2;
+    //is_within_bounds = (kLower < num) && (num < kUpper);
+    //cout << num << " is between " << kLower << " and " 
+    //    << kUpper << ": " << is_within_bounds << endl;
 
-    //equal_result = (num1 == num2);
-    //not_equal_result = (num1 != num2);
+    //cout << "\nEnter an integer outside of bound (" 
+    //    << kLower << ", " << kUpper << "): ";
+    //cin >> num;
+    
+    //bool is_outside_bounds {false};
 
-    //cout << "Equals: " << equal_result << endl;
-    //cout << "Not equals: " << not_equal_result << endl;
+    //is_outside_bounds = (num < kLower) || (kUpper < num);
+    //cout << num << " outside " << kLower << " and " 
+    //    << kUpper << ": " << is_outside_bounds << endl;
 
-    //char char1 {}, char2 {};
+    cout << "\nEnter an integer either " << kLower 
+        << " or " << kUpper << ": ";
+    cin >> num;
 
-    //cout << "Enter two characters: ";
-    //cin >> char1 >> char2;
+    bool is_on_bound {false};
 
-    //equal_result = (char1 == char2);
-    //not_equal_result = (char1 != char2);
-
-    //cout << "Equals: " << equal_result << endl;
-    //cout << "Not equals: " << not_equal_result << endl;
-
-    //double double1 {}, double2 {};
-
-    //cout << "Enter two doubles: ";
-    //cin >> double1 >> double2;
-
-    //equal_result = (double1 == double2);
-    //not_equal_result = (double1 != double2);
-
-    //cout << "Equals: " << equal_result << endl;
-    //cout << "Not equals: " << not_equal_result << endl;
-
-    double double1 {};
-    int int1 {};
-
-    cout << "Enter an integer and double: ";
-    cin >> int1 >> double1;
-
-    equal_result = (int1 == double1);
-    not_equal_result = (int1 != double1);
-
-    cout << "Equals: " << equal_result << endl;
-    cout << "Not equals: " << not_equal_result << endl;
-
+    is_on_bound = (num == kLower) || (num == kUpper);
+    cout << num << " is " << kLower << " or " 
+        << kUpper << ": " << is_on_bound << endl;
+    
     return 0;
 }

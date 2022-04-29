@@ -25,16 +25,19 @@ int main() {
     cout << "Result: ";
     print(results, results_size);
 
+    delete [] results;
+
     cout << endl;
     return 0;
 
 }
 
 void print(const int array[], int ar_size) {
+    cout << "[ ";
     for (int i = 0; i < ar_size; ++i) {
         cout << array[i] << ' ';
     }
-    cout << endl;
+    cout << ']' << endl;
 }
 
 int *apply_all(const int array1[], int ar1_size, const int array2[], int ar2_size) {

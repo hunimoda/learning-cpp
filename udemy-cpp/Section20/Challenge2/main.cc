@@ -34,8 +34,14 @@ void DisplayMenu() {
   std::cout << "Enter a selection (Q to quit): ";
 }
 
+void ClearStdin() {
+  std::cin.clear();
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+
 char GetChoice() {
   char choice;
+  ClearStdin();
   std::cin >> choice;
   return std::toupper(choice);
 }
@@ -69,6 +75,7 @@ void AddAndPlayNewSong(std::list<Song> &playlist,
   std::string title, artist;
   int rating;
 
+  ClearStdin();
   std::cout << "[Add New Song]" << std::endl;
   std::cout << "Title:  "; std::cin >> title;
   std::cout << "Artist: "; std::cin >> artist;
